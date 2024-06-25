@@ -6,6 +6,14 @@
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
+img{
+  user-select: none;
+}
+.prevent_selection{
+  user-select: none;
+
+}
+
 /* variables */
 :root {
   /* Colors */
@@ -95,6 +103,9 @@ body {
   display: flex;
   align-items: center;
   background: var(--bg-primary);
+  user-select: none;
+
+
 }
 
 .navbar .nav-link {
@@ -232,6 +243,8 @@ body {
 
 #footer .social {
   margin: 0.9rem 0;
+  user-select: none;
+
 }
 
 #footer .social img {
