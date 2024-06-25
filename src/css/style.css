@@ -14,6 +14,10 @@ img{
 
 }
 
+.theme-switch{
+  margin: 4px;
+}
+
 
 
 
@@ -296,6 +300,7 @@ body {
 
   .nav-menu.active {
     right: 20px;
+    width: 100%;
   }
 
   .nav-menu .nav-link {
@@ -320,9 +325,9 @@ body {
     padding: 0.2rem 0.4rem;
   }
 
-  .hamburger.active {
+  /* .hamburger.active {
     border: 1px dotted gray;
-  }
+  } */
 
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
