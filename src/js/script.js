@@ -18,6 +18,7 @@ function closeMenu() {
   navMenu.classList.remove("active");
 }
 
+
 // Event Listeners: Handling toggle event
 const toggleSwitch = document.querySelector(
   '.theme-switch input[type="checkbox"]'
@@ -37,7 +38,12 @@ function switchTheme(e) {
 toggleSwitch.addEventListener("change", switchTheme, false);
 
 
+
 // Save user preference on load
+const prefersDarkColorScheme =    window.matchMedia &&
+  window.matchMedia('(prefers-color-scheme: dark)').matches; 
+console.log([prefersDarkColorScheme])
+
 
 const currentTheme = localStorage.getItem("theme")
   ? localStorage.getItem("theme")
@@ -49,6 +55,11 @@ if (currentTheme) {
   if (currentTheme === "dark") {
     toggleSwitch.checked = true;
   }
+  // if it was dark matches 
+}else if(prefersDarkColorScheme){
+  document.documentElement.setAttribute("data-theme", "dark");
+  toggleSwitch.checked = true;
+
 }
 
 //Adding date
